@@ -1,219 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GMe sonic- The Next-Gen Blockchain Game Token">
-    <title>GMe sonic- Game Token Prelaunch</title>
-    
-    <!-- 🌟 Styles (Premium UI Design) -->
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ff0000, #111);
-            color: #fff;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        h1, h2 {
-            color: #ff3d00;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-        .container {
-            width: 85%;
-            margin: auto;
-            padding: 50px 20px;
-        }
+<!-- Add this CSS -->
+<style>
+    /* New 4-column Section */
+    .quad-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding: 4rem 5%;
+    }
 
-        /* 🚀 Hero Section */
-        .hero {
-            background: url('back2.png') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero img {
-            width: 150px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            animation: slideUp 1.2s ease-in-out;
-        }
-        .hero p {
-            font-size: 1.4rem;
-            max-width: 600px;
-            margin: auto;
-            opacity: 0;
-            animation: fadeIn 1.8s ease-in-out forwards;
-        }
-        .btn {
-            background: #ff3d00;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            margin: 15px;
-            border-radius: 5px;
-            font-size: 1.3rem;
-            display: inline-block;
-            transition: 0.3s;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 61, 0, 0.5);
-        }
-        .btn:hover {
-            background: #fff;
-            color: #ff3d00;
-            transform: scale(1.05);
-        }
+    .quad-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 2rem;
+        border: 2px solid var(--primary);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
 
-        /* 🔥 Tokenomics Section */
-        .tokenomics {
-            background: #222;
-            padding: 50px 20px;
-        }
-        .tokenomics img {
-            width: 120px;
-            animation: popUp 1.5s ease-in-out;
-        }
-        .tokenomics p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: auto;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
+    .quad-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(255, 26, 26, 0.3);
+    }
 
-        /* 📅 Roadmap */
-        .roadmap {
-            background: #111;
-            padding: 60px 20px;
-        }
-        .roadmap ul {
-            list-style: none;
-            padding: 0;
-        }
-        .roadmap ul li {
-            font-size: 1.5rem;
-            padding: 15px;
-            position: relative;
-            opacity: 0;
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-        .roadmap ul li::before {
-            content: "🚀";
-            margin-right: 10px;
-        }
+    .quad-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--secondary);
+    }
 
-        /* 🎮 Community */
-        .community {
-            background: #000;
-            padding: 50px 20px;
+    @media (max-width: 1200px) {
+        .quad-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
-        .social-icons a {
-            color: #ff3d00;
-            text-decoration: none;
-            font-size: 1.8rem;
-            margin: 20px;
-            display: inline-block;
-            transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        .quad-grid {
+            grid-template-columns: 1fr;
         }
-        .social-icons a:hover {
-            transform: scale(1.1);
+    }
+
+    /* Updated Blockchain Grid */
+    .blockchain-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 1200px) {
+        .blockchain-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        /* Footer */
-        footer {
-            padding: 20px;
-            background: #222;
-            font-size: 1rem;
+    @media (max-width: 480px) {
+        .blockchain-grid {
+            grid-template-columns: 1fr;
         }
+    }
+</style>
 
-        /* 🌟 Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes popUp {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
-</head>
-<body>
+<!-- Add this HTML section -->
+<section class="quad-grid">
+    <div class="quad-card">
+        <div class="quad-icon">🚀</div>
+        <h3>Hyper Speed</h3>
+        <p>Lightning-fast transactions under 0.5 seconds</p>
+    </div>
+    <div class="quad-card">
+        <div class="quad-icon">🛡️</div>
+        <h3>Secure</h3>
+        <p>Military-grade encryption for all transactions</p>
+    </div>
+    <div class="quad-card">
+        <div class="quad-icon">🎮</div>
+        <h3>Play-to-Earn</h3>
+        <p>Earn tokens through gameplay achievements</p>
+    </div>
+    <div class="quad-card">
+        <div class="quad-icon">💎</div>
+        <h3>Rare NFTs</h3>
+        <p>Exclusive collectible digital assets</p>
+    </div>
+</section>
 
-    <!-- 🚀 Hero Section -->
-    <header class="hero">
-        <img src="logo2.png" alt="GMe Logo">
-        <h1>GMe on Sonic - The Future of Game Tokens</h1>
-        <p>Join the blockchain gaming revolution with real ownership, rewards, and NFT integration.</p>
-        <a href="#roadmap" class="btn">View Roadmap</a>
-        <a href="#about" class="btn">Learn More</a>
-    </header>
-
-    <!-- 🔥 Tokenomics -->
-    <section class="tokenomics">
-        <div class="container">
-            <h2>GMe Tokenomics</h2>
-            <img src="back3.png" alt="Tokenomics Chart">
-            <p>GMe is designed for sustainable growth with fair distribution, staking rewards, and NFT marketplace integration.</p>
-        </div>
-    </section>
-
-    <!-- 📅 Roadmap -->
-    <section id="roadmap" class="roadmap">
-        <div class="container">
-            <h2>Roadmap</h2>
-            <ul>
-                <li>Q1 2025: Smart Contract Launch & Private Sale</li>
-                <li>Q2 2025: Public Sale & Game Beta Testing</li>
-                <li>Q3 2025: NFT Marketplace & Staking Rewards</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 🎮 Community -->
-    <section class="community">
-        <div class="container">
-            <h2>Join Our Community</h2>
-            <p>Follow us for updates, giveaways, and exclusive events.</p>
-            <div class="social-icons">
-                <a href="#">🐦 Twitter</a>
-                <a href="#">📢 Discord</a>
-                <a href="#">🎮 Telegram</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 GMe Token. All Rights Reserved.</p>
-    </footer>
-
-    <!-- 🌟 JavaScript for Animations -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log("🚀 GMe Website Loaded!");
-        });
-    </script>
-
-</body>
-</html>
+<!-- Updated Blockchain Grid -->
+<section class="blockchain-grid">
+    <div class="chain-card">
+        <h3>⚡ Speed Node</h3>
+        <p>Ultra-fast transaction processing</p>
+        <img src="blockchain-node.png" alt="Node">
+    </div>
+    <div class="chain-card">
+        <h3>🔒 Security</h3>
+        <p>Quantum-resistant encryption</p>
+        <img src="shield.png" alt="Security">
+    </div>
+    <div class="chain-card">
+        <h3>🎯 Accuracy</h3>
+        <p>Precision validation system</p>
+        <img src="target.png" alt="Accuracy">
+    </div>
+    <div class="chain-card">
+        <h3>🌐 Network</h3>
+        <p>Global decentralized nodes</p>
+        <img src="globe.png" alt="Network">
+    </div>
+</section>
