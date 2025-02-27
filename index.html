@@ -1,107 +1,257 @@
-<!-- Add this CSS -->
-<style>
-    /* New 4-column Section */
-    .quad-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        padding: 4rem 5%;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="GMe Sonic - Hyper-Speed Blockchain Gaming Token">
+    <title>GMe Sonic | Lightning-Fast Blockchain Gaming</title>
 
-    .quad-card {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-        padding: 2rem;
-        border: 2px solid var(--primary);
-        text-align: center;
-        transition: all 0.3s ease;
-    }
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Comic+Neue:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    .quad-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 25px rgba(255, 26, 26, 0.3);
-    }
-
-    .quad-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: var(--secondary);
-    }
-
-    @media (max-width: 1200px) {
-        .quad-grid {
-            grid-template-columns: repeat(2, 1fr);
+    <!-- Full CSS -->
+    <style>
+        :root {
+            --sonic-blue: #00A9FF;
+            --sonic-red: #FF1A1A;
+            --sonic-gold: #FFD700;
+            --sonic-bg: linear-gradient(135deg, #00082B, #000000);
+            --dark: #0A0A0A;
+            --light: #F5F5F5;
         }
-    }
 
-    @media (max-width: 768px) {
-        .quad-grid {
-            grid-template-columns: 1fr;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
 
-    /* Updated Blockchain Grid */
-    .blockchain-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (max-width: 1200px) {
-        .blockchain-grid {
-            grid-template-columns: repeat(2, 1fr);
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--sonic-bg);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-    }
 
-    @media (max-width: 480px) {
-        .blockchain-grid {
-            grid-template-columns: 1fr;
+        /* Speed Trail Effect */
+        .sonic-trail {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                var(--sonic-blue) 20px,
+                var(--sonic-blue) 40px
+            );
+            animation: speedTrail 0.8s linear infinite;
+            z-index: -1;
+            opacity: 0.1;
         }
-    }
-</style>
 
-<!-- Add this HTML section -->
-<section class="quad-grid">
-    <div class="quad-card">
-        <div class="quad-icon">🚀</div>
-        <h3>Hyper Speed</h3>
-        <p>Lightning-fast transactions under 0.5 seconds</p>
-    </div>
-    <div class="quad-card">
-        <div class="quad-icon">🛡️</div>
-        <h3>Secure</h3>
-        <p>Military-grade encryption for all transactions</p>
-    </div>
-    <div class="quad-card">
-        <div class="quad-icon">🎮</div>
-        <h3>Play-to-Earn</h3>
-        <p>Earn tokens through gameplay achievements</p>
-    </div>
-    <div class="quad-card">
-        <div class="quad-icon">💎</div>
-        <h3>Rare NFTs</h3>
-        <p>Exclusive collectible digital assets</p>
-    </div>
-</section>
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--sonic-blue);
+        }
 
-<!-- Updated Blockchain Grid -->
-<section class="blockchain-grid">
-    <div class="chain-card">
-        <h3>⚡ Speed Node</h3>
-        <p>Ultra-fast transaction processing</p>
-        <img src="blockchain-node.png" alt="Node">
-    </div>
-    <div class="chain-card">
-        <h3>🔒 Security</h3>
-        <p>Quantum-resistant encryption</p>
-        <img src="shield.png" alt="Security">
-    </div>
-    <div class="chain-card">
-        <h3>🎯 Accuracy</h3>
-        <p>Precision validation system</p>
-        <img src="target.png" alt="Accuracy">
-    </div>
-    <div class="chain-card">
-        <h3>🌐 Network</h3>
-        <p>Global decentralized nodes</p>
-        <img src="globe.png" alt="Network">
-    </div>
-</section>
+        .logo {
+            width: 150px;
+            filter: drop-shadow(0 0 5px var(--sonic-blue));
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding: 120px 5% 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .sonic-mascot {
+            position: absolute;
+            right: 5%;
+            bottom: -50px;
+            width: 200px;
+            filter: drop-shadow(0 0 15px var(--sonic-blue));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Game Interface Components */
+        .game-panel {
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid var(--sonic-blue);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Blockchain Stats Grid */
+        .chain-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(0, 169, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Powerups Section */
+        .powerups-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 5rem 5%;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 100px;
+            }
+            
+            .powerups-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sonic-mascot {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes speedTrail {
+            from { transform: translateX(-40px); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="sonic-trail"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="sonic-logo.png" alt="GMe Sonic Logo" class="logo">
+        <nav class="nav-links">
+            <a href="#home">🚀 Home</a>
+            <a href="#ecosystem">🕹️ Ecosystem</a>
+            <a href="#tokenomics">💰 Tokenomics</a>
+            <a href="#community">👾 Community</a>
+        </nav>
+        <div class="hamburger">☰</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="meme-title">GO FAST OR GO HOME!<br>SONIC-SPEED BLOCKCHAIN</h1>
+            
+            <div class="game-panel">
+                <div class="chain-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">0.2s</div>
+                        <p>Transaction Speed</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1M+</div>
+                        <p>Active Players</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">$GME</div>
+                        <p>Native Token</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">∞</div>
+                        <p>Possibilities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="sonic-blockchain.png" class="sonic-mascot" alt="Sonic Character">
+        </div>
+    </section>
+
+    <!-- Powerups Section -->
+    <section class="powerups-grid">
+        <div class="powerup-card game-panel">
+            <div class="powerup-icon">⚡</div>
+            <h3>Hyper Speed Nodes</h3>
+            <p>Accelerate network speed through gameplay achievements</p>
+        </div>
+        
+        <div class="powerup-card game-panel">
+            <div class="powerup-icon">🛡️</div>
+            <h3>Shield Security</h3>
+            <p>Quantum-resistant encryption powered by Chaos Emeralds</p>
+        </div>
+        
+        <div class="powerup-card game-panel">
+            <div class="powerup-icon">🎮</div>
+            <h3>Play-to-Earn</h3>
+            <p>Convert in-game rings to $GME tokens</p>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section class="tokenomics game-panel" id="tokenomics">
+        <h2>Ring-Powered Economy</h2>
+        <div class="token-grid">
+            <div class="token-item">
+                <h4>Total Supply</h4>
+                <div class="token-value">1,000,000,000</div>
+            </div>
+            <div class="token-item">
+                <h4>Market Cap</h4>
+                <div class="token-value">$SONIC SPEED</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Sonic Movement
+        document.addEventListener('mousemove', (e) => {
+            const sonic = document.querySelector('.sonic-mascot');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            sonic.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+        });
+    </script>
+</body>
+</html>
