@@ -3,110 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GME Sonic - The Game Never Ends</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <meta name="description" content="GMe - The Ultimate Game Token Revolutionizing Play-to-Earn. Own, earn, and trade in blockchain gaming.">
+    <title>GMe - Game Token Prelaunch</title>
+    
+    <!-- 🌟 Styles (CSS) -->
     <style>
-        /* Background Animation */
+        /* General Styles */
         body {
-            background: linear-gradient(#B41C1C);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+            text-align: center;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        h1, h2 {
+            color: #ff3d00;
         }
-
-        /* Animated Buttons */
-        .glow-button {
-            transition: 0.3s ease;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        }
-        .glow-button:hover {
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-            transform: scale(1.05);
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
         }
 
-        /* Floating Social Icons */
+        /* 🔥 Hero Section */
+        .hero {
+            background: url('placeholder-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .btn {
+            background: #ff3d00;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            display: inline-block;
+        }
+        .btn-outline {
+            background: none;
+            border: 2px solid #ff3d00;
+        }
+
+        /* 📅 Roadmap */
+        .roadmap {
+            background: #222;
+            padding: 40px;
+        }
+        .roadmap ul {
+            list-style: none;
+            padding: 0;
+        }
+        .roadmap ul li {
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        /* 🎮 Community */
+        .community {
+            background: #000;
+            padding: 50px;
+        }
         .social-icons a {
-            transition: transform 0.3s ease;
-        }
-        .social-icons a:hover {
-            transform: translateY(-5px);
+            color: #ff3d00;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin: 10px;
+            display: inline-block;
         }
 
-        /* Wallet Input Animation */
-        .wallet-input:focus {
-            border-color: #ff0000;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #222;
         }
     </style>
 </head>
-<body class="text-white font-sans">
-    <!-- Header -->
-    <header class="text-center p-10">
-        <img src="logo.jpg" alt="GME Sonic Logo" class="mx-auto w-24 animate-pulse">
-        <h1 class="text-4xl font-extrabold mt-4">GME on Sonic Blockchain 🚀💎🙌</h1>
-        <p class="text-lg mt-2 italic">The Game Never Ends.</p>
+<body>
+
+    <!-- 🔥 Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>GMe - Powering the Future of Blockchain Gaming</h1>
+            <p>Own, Earn, and Trade in the Metaverse with GMe.</p>
+            <a href="#roadmap" class="btn">Explore Roadmap</a>
+            <a href="#about" class="btn btn-outline">About Us</a>
+        </div>
     </header>
 
-    <!-- Main Section -->
-    <section class="text-center px-6 py-10">
-        <p class="text-xl font-semibold">GME is back, and this time, it's on Sonic Blockchain!</p>
-        <img src="background.jpg" alt="GME Sonic Logo2, no-repeat center center fixed; background-size: cover;"
-        <p class="mt-2 text-gray-300">A high-speed, community-driven meme coin with diamond hands only. No paper hands allowed.</p>
-    </section>
-
-    <!-- Why GME? -->
-    <section class="px-6 py-10">
-        <h2 class="text-2xl font-bold text-center">🔥 Why GME on Sonic?</h2>
-        <ul class="mt-4 space-y-3 text-lg text-gray-300">
-            <li class="hover:text-white transition">✅ Blazing Fast Transactions – No more waiting. Sonic speed.</li>
-            <li class="hover:text-white transition">✅ Decentralized & Community-Powered – Built by apes, for apes.</li>
-            <li class="hover:text-white transition">✅ Zero Rug Energy – The people decide. The game never ends.</li>
-        </ul>
-    </section>
-
-    <!-- Track GME -->
-    <section class="text-center px-6 py-10">
-        <h2 class="text-2xl font-bold">📈 Track GME on Sonic</h2>
-        <div class="mt-6 space-y-4">
-            <a href="#" class="glow-button block bg-red-600 hover:bg-red-800 text-white py-2 px-6 rounded">🔹 DEX Screener - Live price action</a>
-            <a href="#" class="glow-button block bg-blue-600 hover:bg-blue-800 text-white py-2 px-6 rounded">🔹 Twitter (X) - Follow for updates</a>
-            <a href="#" class="glow-button block bg-teal-600 hover:bg-teal-800 text-white py-2 px-6 rounded">🔹 Telegram - Join the diamond-hand army</a>
+    <!-- 🪙 Token Overview -->
+    <section class="overview">
+        <div class="container">
+            <h2>What is GMe?</h2>
+            <p>GMe is a gaming token designed to empower players, enabling real ownership of digital assets, seamless in-game transactions, and a next-gen Play-to-Earn model.</p>
         </div>
     </section>
 
-    <!-- Wallet Input -->
-    <section class="text-center px-6 py-10">
-        <h2 class="text-2xl font-bold">💎🙌 HODL strong. The saga continues.</h2>
-        <p class="mt-2 text-gray-300">Enter your wallet address to stay updated:</p>
-        <input type="text" placeholder="Enter Wallet Address" class="wallet-input mt-4 p-2 w-80 rounded text-black border-2 border-gray-400 transition">
-        <button class="glow-button mt-4 bg-green-600 hover:bg-green-800 py-2 px-6 rounded text-white">Submit</button>
+    <!-- 📅 Roadmap -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <ul>
+                <li><span>Q1 2025:</span> Private Sale & Smart Contract Deployment</li>
+                <li><span>Q2 2025:</span> Public Sale & Beta Testing</li>
+                <li><span>Q3 2025:</span> NFT Marketplace & Staking</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- Footer with Social Icons -->
-    <footer class="text-center py-6">
-        <div class="social-icons flex justify-center space-x-6">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook" class="w-8"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram" class="w-8"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter" class="w-8"></a>
+    <!-- 🎮 Community -->
+    <section class="community">
+        <div class="container">
+            <h2>Join the GMe Community</h2>
+            <p>Be part of the revolution! Follow us on social media and get updates on exclusive airdrops.</p>
+            <div class="social-icons">
+                <a href="#">🐦 Twitter</a>
+                <a href="#">📢 Discord</a>
+                <a href="#">🎮 Telegram</a>
+            </div>
         </div>
-        <p class="mt-4 text-gray-400">&copy; 2025 GME Sonic. The game never ends.</p>
+    </section>
+
+    <!-- 🔥 About Us Section -->
+    <section id="about" class="overview">
+        <div class="container">
+            <h2>About GMe</h2>
+            <p>We are a team of blockchain enthusiasts, game developers, and crypto pioneers, working to create the next revolution in gaming.</p>
+            <h3>Our Mission</h3>
+            <p>To empower gamers with a decentralized, transparent, and rewarding blockchain gaming experience.</p>
+            <h3>Meet the Team</h3>
+            <ul>
+                <li><strong>[Founder Name]</strong> - CEO & Blockchain Visionary</li>
+                <li><strong>[CTO Name]</strong> - Smart Contract & Game Developer</li>
+                <li><strong>[CMO Name]</strong> - Community & Growth Strategist</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GMe Token. All Rights Reserved.</p>
     </footer>
 
-    <!-- Scroll Reveal Animation -->
+    <!-- 🌟 JavaScript for Basic Animations -->
     <script>
-        ScrollReveal().reveal('h1, h2, p, ul li, .glow-button', { 
-            delay: 200, 
-            distance: '50px',
-            duration: 800,
-            origin: 'bottom',
-            easing: 'ease-in-out'
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("🚀 GMe Website Loaded!");
         });
     </script>
+
 </body>
 </html>
-
