@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GME Sonic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-red-900 via-black to-gray-900 text-white font-sans">
+    <header class="text-center p-6">
+        <img src="logo-placeholder.png" alt="GME Sonic Logo" class="mx-auto w-24">
+        <h1 class="text-4xl font-bold mt-4">GME on Sonic Blockchain 🚀💎🙌</h1>
+        <p class="text-lg mt-2">The Game Never Ends.</p>
+    </header>
+
+    <section class="text-center px-6 py-10">
+        <p class="text-xl font-semibold">GME is back, and this time, it's on Sonic Blockchain!</p>
+        <p class="mt-2 text-gray-300">A high-speed, community-driven meme coin with diamond hands only. No paper hands allowed.</p>
+    </section>
+
+    <section class="px-6 py-10">
+        <h2 class="text-2xl font-bold text-center">Why GME on Sonic?</h2>
+        <ul class="mt-4 space-y-3 text-lg text-gray-300">
+            <li>✅ Blazing Fast Transactions – No more waiting. Sonic speed.</li>
+            <li>✅ Decentralized & Community-Powered – Built by apes, for apes.</li>
+            <li>✅ Zero Rug Energy – The people decide. The game never ends.</li>
+        </ul>
+    </section>
+
+    <section class="text-center px-6 py-10">
+        <h2 class="text-2xl font-bold">📈 Track GME on Sonic</h2>
+        <div class="mt-6 space-y-4">
+            <a href="#" class="block bg-red-600 hover:bg-red-800 text-white py-2 px-6 rounded">🔹 DEX Screener - Live price action</a>
+            <a href="#" class="block bg-blue-600 hover:bg-blue-800 text-white py-2 px-6 rounded">🔹 Twitter (X) - Follow for updates</a>
+            <a href="#" class="block bg-teal-600 hover:bg-teal-800 text-white py-2 px-6 rounded">🔹 Telegram - Join the diamond-hand army</a>
+        </div>
+    </section>
+
+    <section class="text-center px-6 py-10">
+        <h2 class="text-2xl font-bold">💎🙌 HODL strong. The saga continues.</h2>
+        <p class="mt-2 text-gray-300">Enter your wallet address to stay updated:</p>
+        <input type="text" placeholder="Enter Wallet Address" class="mt-4 p-2 w-80 rounded text-black">
+        <button class="mt-4 bg-green-600 hover:bg-green-800 py-2 px-6 rounded text-white">Submit</button>
+    </section>
+
+    <footer class="text-center py-6">
+        <div class="flex justify-center space-x-6">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook" class="w-8"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram" class="w-8"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter" class="w-8"></a>
+        </div>
+        <p class="mt-4 text-gray-400">&copy; 2025 GME Sonic. The game never ends.</p>
+    </footer>
+</body>
+</html>
