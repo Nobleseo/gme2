@@ -3,111 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GMe - The Ultimate Game Token Revolutionizing Play-to-Earn. Own, earn, and trade in blockchain gaming.">
-    <title>GMe - Game Token Prelaunch</title>
+    <meta name="description" content="GMe sonic- The Next-Gen Blockchain Game Token">
+    <title>GMe sonic- Game Token Prelaunch</title>
     
-    <!-- 🌟 Styles (CSS) -->
+    <!-- 🌟 Styles (Premium UI Design) -->
     <style>
         /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #111;
+            background: linear-gradient(135deg, #ff0000, #111);
             color: #fff;
             text-align: center;
+            overflow-x: hidden;
         }
         h1, h2 {
             color: #ff3d00;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
-            padding: 20px;
+            padding: 50px 20px;
         }
 
-        /* 🔥 Hero Section */
+        /* 🚀 Hero Section */
         .hero {
-            background: url('placeholder-image.jpg') no-repeat center center/cover;
+            background: url('back2.png') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero img {
+            width: 150px;
+            animation: fadeIn 2s ease-in-out;
         }
         .hero h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
+            font-size: 3.5rem;
+            font-weight: bold;
+            animation: slideUp 1.2s ease-in-out;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0;
+            animation: fadeIn 1.8s ease-in-out forwards;
         }
         .btn {
             background: #ff3d00;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
-            margin: 10px;
+            margin: 15px;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             display: inline-block;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 61, 0, 0.5);
         }
-        .btn-outline {
-            background: none;
-            border: 2px solid #ff3d00;
+        .btn:hover {
+            background: #fff;
+            color: #ff3d00;
+            transform: scale(1.05);
+        }
+
+        /* 🔥 Tokenomics Section */
+        .tokenomics {
+            background: #222;
+            padding: 50px 20px;
+        }
+        .tokenomics img {
+            width: 120px;
+            animation: popUp 1.5s ease-in-out;
+        }
+        .tokenomics p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
         /* 📅 Roadmap */
         .roadmap {
-            background: #222;
-            padding: 40px;
+            background: #111;
+            padding: 60px 20px;
         }
         .roadmap ul {
             list-style: none;
             padding: 0;
         }
         .roadmap ul li {
-            font-size: 1.2rem;
-            padding: 10px;
+            font-size: 1.5rem;
+            padding: 15px;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .roadmap ul li::before {
+            content: "🚀";
+            margin-right: 10px;
         }
 
         /* 🎮 Community */
         .community {
             background: #000;
-            padding: 50px;
+            padding: 50px 20px;
         }
         .social-icons a {
             color: #ff3d00;
             text-decoration: none;
-            font-size: 1.5rem;
-            margin: 10px;
+            font-size: 1.8rem;
+            margin: 20px;
             display: inline-block;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.1);
         }
 
         /* Footer */
         footer {
             padding: 20px;
             background: #222;
+            font-size: 1rem;
+        }
+
+        /* 🌟 Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔥 Hero Section -->
+    <!-- 🚀 Hero Section -->
     <header class="hero">
-        <div class="container">
-            <h1>GMe - Powering the Future of Blockchain Gaming</h1>
-            <p>Own, Earn, and Trade in the Metaverse with GMe.</p>
-            <a href="#roadmap" class="btn">Explore Roadmap</a>
-            <a href="#about" class="btn btn-outline">About Us</a>
-        </div>
+        <img src="logo2.png" alt="GMe Logo">
+        <h1>GMe on Sonic - The Future of Game Tokens</h1>
+        <p>Join the blockchain gaming revolution with real ownership, rewards, and NFT integration.</p>
+        <a href="#roadmap" class="btn">View Roadmap</a>
+        <a href="#about" class="btn">Learn More</a>
     </header>
 
-    <!-- 🪙 Token Overview -->
-    <section class="overview">
+    <!-- 🔥 Tokenomics -->
+    <section class="tokenomics">
         <div class="container">
-            <h2>What is GMe?</h2>
-            <p>GMe is a gaming token designed to empower players, enabling real ownership of digital assets, seamless in-game transactions, and a next-gen Play-to-Earn model.</p>
+            <h2>GMe Tokenomics</h2>
+            <img src="back3.png" alt="Tokenomics Chart">
+            <p>GMe is designed for sustainable growth with fair distribution, staking rewards, and NFT marketplace integration.</p>
         </div>
     </section>
 
@@ -116,9 +183,9 @@
         <div class="container">
             <h2>Roadmap</h2>
             <ul>
-                <li><span>Q1 2025:</span> Private Sale & Smart Contract Deployment</li>
-                <li><span>Q2 2025:</span> Public Sale & Beta Testing</li>
-                <li><span>Q3 2025:</span> NFT Marketplace & Staking</li>
+                <li>Q1 2025: Smart Contract Launch & Private Sale</li>
+                <li>Q2 2025: Public Sale & Game Beta Testing</li>
+                <li>Q3 2025: NFT Marketplace & Staking Rewards</li>
             </ul>
         </div>
     </section>
@@ -126,8 +193,8 @@
     <!-- 🎮 Community -->
     <section class="community">
         <div class="container">
-            <h2>Join the GMe Community</h2>
-            <p>Be part of the revolution! Follow us on social media and get updates on exclusive airdrops.</p>
+            <h2>Join Our Community</h2>
+            <p>Follow us for updates, giveaways, and exclusive events.</p>
             <div class="social-icons">
                 <a href="#">🐦 Twitter</a>
                 <a href="#">📢 Discord</a>
@@ -136,28 +203,12 @@
         </div>
     </section>
 
-    <!-- 🔥 About Us Section -->
-    <section id="about" class="overview">
-        <div class="container">
-            <h2>About GMe</h2>
-            <p>We are a team of blockchain enthusiasts, game developers, and crypto pioneers, working to create the next revolution in gaming.</p>
-            <h3>Our Mission</h3>
-            <p>To empower gamers with a decentralized, transparent, and rewarding blockchain gaming experience.</p>
-            <h3>Meet the Team</h3>
-            <ul>
-                <li><strong>[Founder Name]</strong> - CEO & Blockchain Visionary</li>
-                <li><strong>[CTO Name]</strong> - Smart Contract & Game Developer</li>
-                <li><strong>[CMO Name]</strong> - Community & Growth Strategist</li>
-            </ul>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 GMe Token. All Rights Reserved.</p>
     </footer>
 
-    <!-- 🌟 JavaScript for Basic Animations -->
+    <!-- 🌟 JavaScript for Animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             console.log("🚀 GMe Website Loaded!");
