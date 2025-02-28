@@ -283,6 +283,74 @@
                 font-size: 0.9rem;
             }
         }
+        /* General Image Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center images */
+}
+
+/* Hero Image Adjustments */
+.hero-image {
+    position: relative;
+    z-index: 1; /* Ensure image stays behind text */
+    margin-top: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 500px; /* Limit maximum height */
+    object-fit: cover; /* Prevent distortion */
+}
+
+/* Content Section Images */
+.additional-content img {
+    max-height: 400px;
+    margin-bottom: 2rem;
+    object-position: center;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-rows: auto auto; /* Stack content vertically */
+        gap: 1rem;
+        padding-top: 80px;
+    }
+
+    .hero-image {
+        order: 2; /* Move image below text on mobile */
+        margin-top: 1rem;
+    }
+
+    .additional-content {
+        grid-template-rows: auto auto;
+    }
+
+    .additional-content div:first-child {
+        order: 2; /* Text below image on mobile */
+    }
+
+    .additional-content div:last-child {
+        order: 1; /* Image above text on mobile */
+    }
+}
+
+/* Ensure text containers have proper z-index */
+.hero-content,
+.tokenomics-info,
+.additional-content div {
+    position: relative;
+    z-index: 2; /* Keep text above images */
+}
+
+/* Add spacing around text elements */
+h1, h2, h3, p {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
     </style>
 </head>
 <body>
