@@ -27,12 +27,27 @@
       box-sizing: border-box;
     }
 
+    /* Apply animated gradient background for the entire site */
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--dark);
+      background: linear-gradient(45deg, #140000, #330000, #5a0000, #000000);
+      background-size: 300% 300%;
+      animation: blockchainGradient 5s ease infinite;
       color: var(--light);
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    @keyframes blockchainGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* Header */
@@ -88,31 +103,6 @@
       cursor: pointer;
       color: var(--light);
     }
-.hero {
-  min-height: 100vh;
-  padding: 120px 5% 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  
-  /* Dark Red and Black Gradient */
-  background: linear-gradient(45deg, #140000, #330000, #5a0000, #000000);
-  background-size: 300% 300%;
-  animation: blockchainGradient 10s ease infinite;
-}
-
-@keyframes blockchainGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
     /* Hero Section */
     .hero {
@@ -290,6 +280,7 @@
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
+        padding-top: 120px; /* Increased padding so header doesn't overlap hero text */
       }
 
       .tokenomics {
@@ -342,54 +333,6 @@
       margin-bottom: 2rem;
       object-position: center;
     }
-
-    /* Mobile Responsive Adjustments */
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-rows: auto auto;
-        gap: 1rem;
-        padding-top: 80px;
-      }
-
-      .hero-image {
-        order: 2;
-        margin-top: 1rem;
-      }
-
-      .additional-content {
-        grid-template-rows: auto auto;
-      }
-
-      .additional-content div:first-child {
-        order: 2;
-      }
-
-      .additional-content div:last-child {
-        order: 1;
-      }
-    }
-
-    /* Ensure text containers have proper z-index */
-    .hero-content,
-    .tokenomics-info,
-    .additional-content div {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Add spacing around text elements */
-    h1, h2, h3, p {
-      padding: 0 1rem;
-      margin-bottom: 1.5rem;
-      @media (max-width: 768px) {
-  .hero {
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    padding-top: 120px; /* Increased padding to prevent the header from overlapping hero text */
-  }
-}
-
-    }
   </style>
 </head>
 <body>
@@ -413,8 +356,8 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content scroll-reveal">
-      <h1>The Game Never ends..<br>Gme on sonic Blockchain</h1>
-      <p>Gme is back and this time,it's on Sonic Blockchain! A high speed, community-driven meme coin with diamond hands only. No paper hands allowed.</p>
+      <h1>The Game Never Ends..<br>GMe on Sonic Blockchain</h1>
+      <p>GMe is back and this time, it's on Sonic Blockchain! A high speed, community-driven meme coin with diamond hands only. No paper hands allowed.</p>
       
       <div class="contract-box scroll-reveal">
         <h3>Official Contract Address</h3>
@@ -466,8 +409,8 @@
   <!-- Additional Content Sections -->
   <section class="additional-content scroll-reveal">
     <div>
-      <h2>Why Choose GMe on sonic?</h2>
-      <p>GMe is not just another token. It's a gaming revolution powered by decentralized finance, Blazing fast Transactions, ensuring fairness, transparency, and rewards for players and investors...whats more? built by apes, for apes, zero Rug Energy- the people decide.</p>
+      <h2>Why Choose GMe on Sonic?</h2>
+      <p>GMe is not just another token. It's a gaming revolution powered by decentralized finance, blazing fast transactions, ensuring fairness, transparency, and rewards for players and investors — built by apes, for apes, with zero Rug Energy. The people decide.</p>
     </div>
     <div>
       <img src="back3.png" alt="Why Choose Us">
@@ -480,7 +423,7 @@
     </div>
     <div>
       <h2>Future of Gaming</h2>
-      <p>With blockchain integration, play-to-earn mechanics, and NFT ownership, GMe on sonic is redefining how gamers interact with the digital economy.</p>
+      <p>With blockchain integration, play-to-earn mechanics, and NFT ownership, GMe on Sonic is redefining how gamers interact with the digital economy.</p>
     </div>
   </section>
 
@@ -517,7 +460,7 @@
           element.classList.add('active');
         }
       });
-    }
+    };
 
     window.addEventListener('scroll', revealElements);
     revealElements(); // Initial check
