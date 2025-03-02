@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GMe - Blockchain Gaming Ecosystem">
-    <title>GMe Sonic | Decentralized Gaming Finance</title>
+    <title>GMe on Sonic | blockchain Gaming Finance</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
     <style>
         /* Base Styles */
         :root {
-            --primary: #FF6B00;
-            --dark: #0A0A0A;
-            --light: #F5F5F5;
-            --gold: #FFD700;
+            --primary: #ED1C24;  /* GameStop Red */
+            --dark: #000000;     /* True Black */
+            --light: #FFFFFF;    /* White for text */
+            --gold: #FFD700;     /* Remains the same */
         }
 
         * {
@@ -41,7 +41,7 @@
             top: 0;
             width: 100%;
             padding: 1rem 5%;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             display: flex;
@@ -93,7 +93,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #FF6B00, #FF3D00);
+            background: linear-gradient(45deg, #ED1C24, #B71C1C);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -102,7 +102,7 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.2);
         }
 
         .hero-image img {
@@ -112,13 +112,13 @@
 
         /* Contract Address Section */
         .contract-box {
-            background: linear-gradient(145deg, #1a0000, #420000);
+            background: linear-gradient(145deg, #000000, #B71C1C);
             border: 2px solid var(--primary);
             border-radius: 15px;
             padding: 1.5rem;
             margin: 2rem 0;
             position: relative;
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+            box-shadow: 0 0 20px rgba(237, 28, 36, 0.3);
         }
 
         .contract-address {
@@ -146,7 +146,7 @@
 
         .copy-btn:hover {
             transform: scale(1.05);
-            background: #FF3D00;
+            background: #B71C1C;
         }
 
         /* Features Grid */
@@ -196,13 +196,13 @@
 
         .additional-content img {
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.2);
             width: 100%;
         }
 
         /* Footer */
         .footer {
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             padding: 3rem 5%;
             text-align: center;
             border-top: 2px solid var(--primary);
@@ -284,73 +284,73 @@
             }
         }
         /* General Image Responsiveness */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center images */
-}
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center images */
+        }
 
-/* Hero Image Adjustments */
-.hero-image {
-    position: relative;
-    z-index: 1; /* Ensure image stays behind text */
-    margin-top: 2rem;
-}
+        /* Hero Image Adjustments */
+        .hero-image {
+            position: relative;
+            z-index: 1; /* Ensure image stays behind text */
+            margin-top: 2rem;
+        }
 
-.hero-image img {
-    width: 100%;
-    max-height: 500px; /* Limit maximum height */
-    object-fit: cover; /* Prevent distortion */
-}
+        .hero-image img {
+            width: 100%;
+            max-height: 500px; /* Limit maximum height */
+            object-fit: cover; /* Prevent distortion */
+        }
 
-/* Content Section Images */
-.additional-content img {
-    max-height: 400px;
-    margin-bottom: 2rem;
-    object-position: center;
-}
+        /* Content Section Images */
+        .additional-content img {
+            max-height: 400px;
+            margin-bottom: 2rem;
+            object-position: center;
+        }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        grid-template-rows: auto auto; /* Stack content vertically */
-        gap: 1rem;
-        padding-top: 80px;
-    }
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-rows: auto auto; /* Stack content vertically */
+                gap: 1rem;
+                padding-top: 80px;
+            }
 
-    .hero-image {
-        order: 2; /* Move image below text on mobile */
-        margin-top: 1rem;
-    }
+            .hero-image {
+                order: 2; /* Move image below text on mobile */
+                margin-top: 1rem;
+            }
 
-    .additional-content {
-        grid-template-rows: auto auto;
-    }
+            .additional-content {
+                grid-template-rows: auto auto;
+            }
 
-    .additional-content div:first-child {
-        order: 2; /* Text below image on mobile */
-    }
+            .additional-content div:first-child {
+                order: 2; /* Text below image on mobile */
+            }
 
-    .additional-content div:last-child {
-        order: 1; /* Image above text on mobile */
-    }
-}
+            .additional-content div:last-child {
+                order: 1; /* Image above text on mobile */
+            }
+        }
 
-/* Ensure text containers have proper z-index */
-.hero-content,
-.tokenomics-info,
-.additional-content div {
-    position: relative;
-    z-index: 2; /* Keep text above images */
-}
+        /* Ensure text containers have proper z-index */
+        .hero-content,
+        .tokenomics-info,
+        .additional-content div {
+            position: relative;
+            z-index: 2; /* Keep text above images */
+        }
 
-/* Add spacing around text elements */
-h1, h2, h3, p {
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-}
+        /* Add spacing around text elements */
+        h1, h2, h3, p {
+            padding: 0 1rem;
+            margin-bottom: 1.5rem;
+        }
     </style>
 </head>
 <body>
