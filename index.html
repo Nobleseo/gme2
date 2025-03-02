@@ -88,16 +88,6 @@
       cursor: pointer;
       color: var(--light);
     }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      padding: 120px 5% 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 2rem;
-    }
 .hero {
   min-height: 100vh;
   padding: 120px 5% 60px;
@@ -106,10 +96,10 @@
   align-items: center;
   gap: 2rem;
   
-  /* Animated Gradient Background */
-  background: linear-gradient(45deg, #ED1C24, #000000);
-  background-size: 400% 400%;
-  animation: blockchainGradient 15s ease infinite;
+  /* Dark Red and Black Gradient */
+  background: linear-gradient(45deg, #140000, #330000, #5a0000, #000000);
+  background-size: 300% 300%;
+  animation: blockchainGradient 10s ease infinite;
 }
 
 @keyframes blockchainGradient {
@@ -123,6 +113,16 @@
     background-position: 0% 50%;
   }
 }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      padding: 120px 5% 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
 
     .hero-content {
       max-width: 600px;
