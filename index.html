@@ -27,27 +27,13 @@
       box-sizing: border-box;
     }
 
-    /* Apply animated gradient background for the entire site */
+    /* Body background changed to solid black */
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(45deg, #140000, #330000, #5a0000, #000000);
-      background-size: 300% 300%;
-      animation: blockchainGradient 5s ease infinite;
+      background: #000000;
       color: var(--light);
       line-height: 1.6;
       overflow-x: hidden;
-    }
-
-    @keyframes blockchainGradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
     }
 
     /* Header */
@@ -78,7 +64,6 @@
     .brand-text {
       color: var(--light);
       font-family: 'Orbitron', sans-serif;
-      /* Responsive font size */
       font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
 
@@ -104,7 +89,7 @@
       color: var(--light);
     }
 
-    /* Hero Section */
+    /* Hero Section with Animated Gradient */
     .hero {
       min-height: 100vh;
       padding: 120px 5% 60px;
@@ -112,6 +97,27 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #8B0000, #660000, #8B0000, #4B0082);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .hero-content {
@@ -280,7 +286,7 @@
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
-        padding-top: 120px; /* Increased padding so header doesn't overlap hero text */
+        padding-top: 120px;
       }
 
       .tokenomics {
@@ -367,7 +373,7 @@
       </div>
     </div>
     <div class="hero-image scroll-reveal">
-      <img src="back3.png" alt="Blockchain Gaming">
+      <img src="lappy.png" alt="Blockchain Gaming">
     </div>
   </section>
 
@@ -379,7 +385,7 @@
       <p>Earn tokens through gameplay and achievements</p>
     </div>
     <div class="feature-card scroll-reveal">
-      <img src="logo2.png" alt="Feature 2">
+      <img src="logo2.jpg" alt="Feature 2">
       <h3>NFT Marketplace</h3>
       <p>Trade in-game assets as verifiable NFTs</p>
     </div>
@@ -393,7 +399,7 @@
   <!-- Tokenomics Section -->
   <section class="tokenomics" id="about">
     <div class="chart-container scroll-reveal">
-      <img src="back4.png" alt="Tokenomics Chart">
+      <img src="moon.png" alt="Tokenomics Chart">
     </div>
     <div class="tokenomics-info scroll-reveal">
       <h2>Sustainable Tokenomics</h2>
